@@ -1,0 +1,122 @@
+/* 全局样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #ff416c, #ff4b2b, #1e3c72, #2a5298);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  font-family: "Arial", sans-serif;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* 背景动态渐变 */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 标题炫酷动画 */
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+}
+
+/* 文字动画 */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 描述文字 */
+p {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards 1s;
+}
+
+/* 炫酷3D按钮 */
+.contact-btn {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  border: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 65, 108, 0.4);
+  transition: 0.3s;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards 1.5s;
+}
+
+.contact-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(255, 65, 108, 0.6);
+}
+
+/* 角落的光晕呼吸灯 */
+.glow {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent);
+  border-radius: 50%;
+  top: 20%;
+  left: 10%;
+  animation: glowPulse 5s infinite alternate ease-in-out;
+}
+
+@keyframes glowPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0.2;
+  }
+}
+
+/* 免责声明 */
+.disclaimer {
+  position: absolute;
+  bottom: 20px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards 2s;
+}
