@@ -2,7 +2,7 @@
 <html lang="zh">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
 
     <!-- SEO Meta Tags -->
     <!-- 针对搜索引擎进行优化 -->
@@ -43,6 +43,19 @@
     <div class="glow"></div>
 
     <!-- 免责声明 -->
-    <small class="disclaimer">⚠️免责声明：此页面仅为娱乐用途，不涉及任何真实事件，仅为展示前端技术的实验性作品。</small>
+    <small class="disclaimer">⚠️ 免责声明：此页面仅为娱乐用途，不涉及任何真实事件，仅为展示前端技术的实验性作品。</small>
+
+    <!-- Dialog 对话框 -->
+    <dialog id="contactDialog">
+      <p class="dialog-content">
+        这个按钮怎么会有效果嘛
+        <br />
+        这只是一个玩具页面而已啊
+      </p>
+      <button id="closeDialog">关闭</button>
+    </dialog>
+
+    <!-- 引入独立的 JS 文件 -->
+    <script src="scripts.js"></script>
   </body>
 </html>

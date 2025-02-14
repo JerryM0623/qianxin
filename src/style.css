@@ -4,6 +4,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  font-size: 16px;
+}
+
 body {
   height: 100vh;
   display: flex;
@@ -17,9 +22,10 @@ body {
   color: white;
   text-align: center;
   overflow: hidden;
+  padding: 0 10px;
 }
 
-/* 背景动态渐变 */
+/* 背景动画 */
 @keyframes gradientBG {
   0% {
     background-position: 0% 50%;
@@ -34,7 +40,7 @@ body {
 
 /* 标题炫酷动画 */
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -57,7 +63,7 @@ h1 {
 
 /* 描述文字 */
 p {
-  font-size: 1.2rem;
+  font-size: 2rem;
   margin-top: 20px;
   opacity: 0;
   animation: fadeIn 2s ease-in forwards 1s;
@@ -115,8 +121,96 @@ p {
 .disclaimer {
   position: absolute;
   bottom: 20px;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.6);
   opacity: 0;
   animation: fadeIn 2s ease-in forwards 2s;
+}
+
+/* 添加样式来美化 Dialog */
+dialog {
+  padding: 20px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 80%;
+  width: 400px;
+  text-align: center;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+dialog .dialog-content {
+  color: #333;
+  opacity: 1;
+  font-size: 1rem;
+  animation: none;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ff4b2b;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #ff416c;
+}
+
+/* 媒体查询：小屏幕 */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+
+  .contact-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    margin-top: 20px;
+  }
+
+  .glow {
+    width: 150px;
+    height: 150px;
+    top: 15%;
+    left: 5%;
+  }
+
+  .disclaimer {
+    padding: 0 10px;
+    font-size: 0.7rem;
+  }
+}
+
+/* 媒体查询：中屏幕 */
+@media (max-width: 1024px) and (min-width: 601px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
+  .contact-btn {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+  }
+
+  .disclaimer {
+    font-size: 0.8rem;
+  }
 }
