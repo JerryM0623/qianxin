@@ -1,7 +1,5 @@
 /* 全局样式 */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -137,10 +135,12 @@ dialog {
   width: 400px;
   text-align: center;
   border: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  animation: fadeIn 0.25s linear forwards;
+}
+
+/* 设置 dialog 的背景遮罩颜色 */
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
 }
 
 dialog .dialog-content {
@@ -190,7 +190,6 @@ button:hover {
   }
 
   .disclaimer {
-    padding: 0 10px;
     font-size: 0.7rem;
   }
 }
