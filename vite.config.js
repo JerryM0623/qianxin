@@ -11,7 +11,7 @@ export default defineConfig({
     })
   ],
   root: "./src", // 指定源码目录
-  publicDir: "public", // 确保 Vite 仍然使用 public 目录
+  publicDir: "../public", // 确保 Vite 仍然使用 public 目录
   build: {
     outDir: "../dist", // 输出目录
     emptyOutDir: true, // 构建前清空文件夹
